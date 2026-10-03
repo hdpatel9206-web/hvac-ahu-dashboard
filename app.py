@@ -118,13 +118,11 @@ PSI_VALUES = {
     "Fan_Speed":  2.6321,
     "OA_Damper":  0.4811,
     "RA_Damper":  1.4386,
-    "CC_Valve":   0.88,    # supplementary psi computation
-    "HC_Valve":   0.49,    # supplementary psi computation
-    "Occupancy":  0.0002,  # supplementary psi computation
+    "Occupancy":  0.0002,  # thesis Table 4.6 (not in results_summary.json)
 }
 
 # GREEN < 0.20 · AMBER 0.20–0.50 · RED > 0.50 (thesis framework figure;
-# Yurdakul & Naranjo, 2019). Every PSI classification goes through psi_gate().
+# thresholds defined in this study). Every PSI classification goes through psi_gate().
 PSI_THRESHOLDS = {"GREEN": 0.20, "AMBER": 0.20, "RED": 0.50}
 PSI_GATE_COLOURS = {"RED": "#e74c3c", "AMBER": "#f39c12", "GREEN": "#27ae60"}
 PSI_BANDS_TEXT = (f"GREEN < {PSI_THRESHOLDS['GREEN']:.2f} · "
@@ -418,7 +416,7 @@ def fig_psi_bar():
                 f"{val:.4f}", va="center", fontsize=8.5)
     ax.legend(fontsize=8.5, loc="lower right")
     _style(ax,
-           title="Population Stability Index — All 11 Sensors (Primary Model)",
+           title=f"Population Stability Index — {len(PSI_VALUES)} Sensors (Primary Model)",
            xlabel="PSI Value")
     ax.set_xlim(0, max(values) * 1.2)
     fig.tight_layout()
@@ -557,7 +555,7 @@ def fig_psi_bar_compact():
     for bar, val in zip(bars, values):
         ax.text(val + 0.03, bar.get_y() + bar.get_height() / 2,
                 f"{val:.2f}", va="center", fontsize=7.5)
-    _style(ax, title="PSI — All 11 Sensors", xlabel="PSI Value")
+    _style(ax, title=f"PSI — {len(PSI_VALUES)} Sensors", xlabel="PSI Value")
     ax.set_xlim(0, max(values) * 1.22)
     ax.tick_params(labelsize=7.5)
     fig.tight_layout(pad=0.8)
@@ -678,16 +676,16 @@ def page_overview(df, fdf):
               f"CI [{m['ci_lo']:.4f}, {m['ci_hi']:.4f}]")
     c2.metric("Cross-building F1",     f"{m['f1_crossbldg']:.3f}",
               f"-{m['gap_pp']:.2f} pp", delta_color="inverse")
-    c3.metric("Fan Speed PSI",         f"{m['fan_psi']:.4f}", "RED gate")
-    c4.metric("OA Temp PSI",           f"{m['oa_psi']:.4f}",  "RED gate")
-    c5.metric("Binary F1 (10% adapt)", f"{m['binary_adapt']:.3f}", "+58.1 pp recovery")
+    c3.metric("Fan Speed PSI",         f"{m['fan_psi']:.4f}", "RED gate", delta_color="off")
+    c4.metric("OA Temp PSI",           f"{m['oa_psi']:.4f}",  "RED gate", delta_color="off")
+    c5.metric("Binary F1 (10% adapt)", f"{m['binary_adapt']:.3f}", f"+{(m['binary_adapt'] - m['binary_cb']) * 100:.1f} pp recovery")
 
     st.markdown("---")
     col_left, col_right = st.columns([0.54, 0.46])
 
     with col_left:
-        st.markdown("**PSI Deployment Gate — All 11 Sensors**")
-        st.caption(f"{PSI_BANDS_TEXT} (Yurdakul & Naranjo, 2019)")
+        st.markdown(f"**PSI Deployment Gate — {len(PSI_VALUES)} Sensors**")
+        st.caption(f"{PSI_BANDS_TEXT} (thresholds defined in this study)")
         psi_cards = []
         for sensor, psi_val in PSI_VALUES.items():
             gate = psi_gate(psi_val)
@@ -722,7 +720,8 @@ def page_overview(df, fdf):
     with col_right:
         k = kpis(fdf)
         st.markdown("**Live Data KPIs**")
-        kc1, kc2, kc3, kc4 = st.columns(4)
+        kc1, kc2 = st.columns(2)
+        kc3, kc4 = st.columns(2)
         kc1.metric("Total Records", f"{k['total']:,}")
         kc2.metric("Fault Rate",    f"{k['fault_rate']}%")
         kc3.metric("Healthy",       f"{k['healthy_pct']}%")
@@ -778,7 +777,7 @@ def page_fault_analysis(df, fdf):
                 "Real-world average (Seoul/Cork)",
             ],
             "Macro F1":   [0.9923, 0.331, 0.7440, 0.084],
-            "Binary F1":  [0.9990, 0.415, 0.9920, "N/A"],
+            "Binary F1":  [0.9990, 0.415, 0.9920, None],
             "Gap (pp)":   ["—", "66.13", "25.0", ">90"],
         })
         st.dataframe(compare, hide_index=True, use_container_width=True, height=175)
@@ -821,7 +820,7 @@ def feature_psi_gate(feature: str) -> str:
     """PSI gate of the raw sensor channel a feature is built from ("—" if derived)."""
     base = re.sub(r"_r[ms]\d+$", "", feature)
     short = {v: k for k, v in SENSOR_FULL_NAMES.items()}.get(base)
-    return psi_gate(PSI_VALUES[short]) if short else "—"
+    return psi_gate(PSI_VALUES[short]) if short in PSI_VALUES else "—"
 
 # ── Top-12 impurity importance, Table 4.4 (canonical run_20260409_022716, 70 features) ─
 PRECOMPUTED_IMPORTANCE = [

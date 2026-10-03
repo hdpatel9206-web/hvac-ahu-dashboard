@@ -5,7 +5,7 @@
 
 Most fault-detection models for building HVAC are evaluated on the same building they were trained on. This project measures what happens when they are moved to a different building, explains why they fail, and shows how little target-building data is needed to recover.
 
-[**▶ Live dashboard**](LINK_TO_STREAMLIT_APP) · [Thesis abstract](LINK_TO_ABSTRACT_PDF)
+[**▶ Live dashboard**](https://hvac-ahu-dashboard-ibhcqccfqsffdv982t5otk.streamlit.app)
 
 ---
 
@@ -97,4 +97,4 @@ Supervisors: Prof. Farshi Hossein, Prof. Dr. Juan Ocampo
 
 ## Contact
 
-**Harshil Patel** · [LinkedIn](LINK_TO_LINKEDIN) · Berlin, Germany
+**Harshil Patel** · Berlin, Germany
