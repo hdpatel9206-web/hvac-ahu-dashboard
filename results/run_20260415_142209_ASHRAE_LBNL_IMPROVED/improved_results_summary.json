@@ -1,0 +1,37 @@
+{
+  "run": "run_20260415_142209_ASHRAE_LBNL_IMPROVED",
+  "improvements": [
+    "ratio_features",
+    "correlation_pruning",
+    "stratified_finetuning"
+  ],
+  "features_before": 76,
+  "features_dropped": 35,
+  "features_final": 41,
+  "n_train": 66432,
+  "n_test": 16608,
+  "n_crossbldg": 53279,
+  "f1_insample": 0.9753,
+  "ci": [
+    0.9734,
+    0.9774
+  ],
+  "mcc": 0.9484,
+  "bal_acc": 0.9754,
+  "f1_crossbldg": 0.3456,
+  "f1_adapted": 0.9911,
+  "model_comparison": {
+    "Rule-based (Dummy)": {
+      "f1_insample": 0.2473,
+      "f1_crossbldg": 0.1691
+    },
+    "Gradient Boosting": {
+      "f1_insample": 0.9285,
+      "f1_crossbldg": 0.3402
+    },
+    "Random Forest": {
+      "f1_insample": 0.9753,
+      "f1_crossbldg": 0.3456
+    }
+  }
+}

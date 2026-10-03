@@ -1,0 +1,56 @@
+{
+  "experiment": "boiler_cross_equipment",
+  "shared_features": [
+    "AHU: Outdoor Air Temperature",
+    "AHU: Outdoor Air Temperature_rm10",
+    "AHU: Outdoor Air Temperature_rs10",
+    "AHU: Outdoor Air Temperature_rm30",
+    "AHU: Outdoor Air Temperature_rs30",
+    "AHU: Outdoor Air Temperature_rm60",
+    "AHU: Outdoor Air Temperature_rs60"
+  ],
+  "f1_insample": 1.0,
+  "f1_cross_equip": 0.0957,
+  "thesis_ahu_cb": 0.331,
+  "sdahu_cb": 0.223,
+  "rtu_cross_equip": 0.128,
+  "best_adapted": 0.1568,
+  "curve": [
+    {
+      "proportion": 0.0,
+      "records": 0,
+      "f1_macro": 0.0957,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.01,
+      "records": 42043,
+      "f1_macro": 0.1568,
+      "delta": 0.0611
+    },
+    {
+      "proportion": 0.05,
+      "records": 210216,
+      "f1_macro": 0.138,
+      "delta": 0.0423
+    },
+    {
+      "proportion": 0.1,
+      "records": 420432,
+      "f1_macro": 0.1157,
+      "delta": 0.02
+    },
+    {
+      "proportion": 0.2,
+      "records": 840864,
+      "f1_macro": 0.0848,
+      "delta": -0.011
+    },
+    {
+      "proportion": 0.3,
+      "records": 1261296,
+      "f1_macro": 0.0633,
+      "delta": -0.0324
+    }
+  ]
+}

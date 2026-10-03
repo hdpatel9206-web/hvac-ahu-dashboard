@@ -1,0 +1,50 @@
+{
+  "Office": {
+    "rows": 175532,
+    "shared_cols": [
+      "AHU: Supply Air Temperature",
+      "AHU: Return Air Temperature",
+      "AHU: Supply Air Fan Status",
+      "AHU: Cooling Coil Valve Control Signal"
+    ],
+    "psi_values": {
+      "AHU: Supply Air Temperature": 43.481,
+      "AHU: Return Air Temperature": 50.659,
+      "AHU: Supply Air Fan Status": 2.0444,
+      "AHU: Cooling Coil Valve Control Signal": 11.9949
+    },
+    "f1": 0.0688
+  },
+  "Auditorium": {
+    "rows": 113375,
+    "shared_cols": [
+      "AHU: Supply Air Temperature",
+      "AHU: Return Air Temperature",
+      "AHU: Supply Air Fan Status",
+      "AHU: Cooling Coil Valve Control Signal"
+    ],
+    "psi_values": {
+      "AHU: Supply Air Temperature": 50.0979,
+      "AHU: Return Air Temperature": 50.6561,
+      "AHU: Supply Air Fan Status": 2.2922,
+      "AHU: Cooling Coil Valve Control Signal": 4.1519
+    },
+    "f1": 0.0579
+  },
+  "Hospital": {
+    "rows": 66048,
+    "shared_cols": [
+      "AHU: Supply Air Temperature",
+      "AHU: Return Air Temperature",
+      "AHU: Supply Air Fan Status",
+      "AHU: Cooling Coil Valve Control Signal"
+    ],
+    "psi_values": {
+      "AHU: Supply Air Temperature": 43.1465,
+      "AHU: Return Air Temperature": 50.1559,
+      "AHU: Supply Air Fan Status": 0.0093,
+      "AHU: Cooling Coil Valve Control Signal": 7.8938
+    },
+    "f1": 0.0264
+  }
+}

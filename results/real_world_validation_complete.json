@@ -1,0 +1,87 @@
+{
+  "real_world_validation": {
+    "Seoul_office": {
+      "experiment": "seoul_real_bms_external_validation",
+      "dataset": "Real BMS, South Korea, Hanyang University 2024",
+      "doi": "10.1016/j.dib.2024.110956",
+      "rows": 5471,
+      "shared_cols": [
+        "AHU: Supply Air Temperature",
+        "AHU: Outdoor Air Temperature",
+        "AHU: Supply Air Fan Status",
+        "AHU: Cooling Coil Valve Control Signal"
+      ],
+      "f1_cross_equipment": 0.1829,
+      "psi_values": {
+        "AHU: Supply Air Temperature": 40.2469,
+        "AHU: Cooling Coil Valve Control Signal": 24.0633,
+        "AHU: Outdoor Air Temperature": 20.4375,
+        "AHU: Supply Air Fan Status": 2.2919
+      },
+      "thesis_comparison": {
+        "ahu_ahu_cross_building": 0.331,
+        "ahu_fcu_cross_equipment": 0.086,
+        "ahu_rtu_cross_equipment": 0.128,
+        "ahu_boiler_cross_equipment": 0.096
+      }
+    },
+    "Wang_office": {
+      "rows": 175532,
+      "shared_cols": [
+        "AHU: Supply Air Temperature",
+        "AHU: Return Air Temperature",
+        "AHU: Supply Air Fan Status",
+        "AHU: Cooling Coil Valve Control Signal"
+      ],
+      "psi_values": {
+        "AHU: Supply Air Temperature": 43.481,
+        "AHU: Return Air Temperature": 50.659,
+        "AHU: Supply Air Fan Status": 2.0444,
+        "AHU: Cooling Coil Valve Control Signal": 11.9949
+      },
+      "f1": 0.0688
+    },
+    "Wang_auditorium": {
+      "rows": 113375,
+      "shared_cols": [
+        "AHU: Supply Air Temperature",
+        "AHU: Return Air Temperature",
+        "AHU: Supply Air Fan Status",
+        "AHU: Cooling Coil Valve Control Signal"
+      ],
+      "psi_values": {
+        "AHU: Supply Air Temperature": 50.0979,
+        "AHU: Return Air Temperature": 50.6561,
+        "AHU: Supply Air Fan Status": 2.2922,
+        "AHU: Cooling Coil Valve Control Signal": 4.1519
+      },
+      "f1": 0.0579
+    },
+    "Wang_hospital": {
+      "rows": 66048,
+      "shared_cols": [
+        "AHU: Supply Air Temperature",
+        "AHU: Return Air Temperature",
+        "AHU: Supply Air Fan Status",
+        "AHU: Cooling Coil Valve Control Signal"
+      ],
+      "psi_values": {
+        "AHU: Supply Air Temperature": 43.1465,
+        "AHU: Return Air Temperature": 50.1559,
+        "AHU: Supply Air Fan Status": 0.0093,
+        "AHU: Cooling Coil Valve Control Signal": 7.8938
+      },
+      "f1": 0.0264
+    }
+  },
+  "key_findings": {
+    "max_psi_real_world": 50.66,
+    "max_psi_ashrae_crossbuilding": 2.94,
+    "psi_ratio": 17.2,
+    "hospital_fan_psi": 0.0093,
+    "f1_office": 0.069,
+    "f1_auditorium": 0.058,
+    "f1_hospital": 0.026,
+    "f1_seoul": 0.183
+  }
+}

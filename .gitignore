@@ -1,0 +1,50 @@
+# Python / environments
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.ipynb_checkpoints/
+.vscode/
+zipinspect_0415/
+
+# Raw data (LBNL / ASHRAE) is not redistributed — see data/README.md
+data/
+!/data/
+/data/*
+!/data/README.md
+!/data/chiller_predictions.csv
+
+# Superseded dashboard versions (kept locally, not published)
+app_legacy.py
+app_updated.py
+app_updatedd.py
+app_updateddd.py
+
+# Files over 50 MB (listed explicitly; git cannot filter by size)
+models/registry/ahu/rf_model.pkl
+models/registry/boiler/rf_model.pkl
+models/registry/fcu/rf_model.pkl
+results/new_model_combined/rf_model_combined.pkl
+results/new_model_final/rf_model_final.pkl
+results/new_model_optimised/rf_model_optimised.pkl
+results/new_model_sdahu/rf_model_new.pkl
+results/run_20260409_022716_ASHRAE_LBNL/models/rf_model.pkl
+results/run_20260415_142209_ASHRAE_LBNL_IMPROVED/rf_model_improved.pkl
+
+# Raw-sensor reference samples (subsets of LBNL/ASHRAE data; not needed by the dashboard)
+models/registry/*/training_reference.pkl
+
+# GitHub profile README (belongs in the profile repo, not here)
+PROFILE_README.md
+
+# Duplicate of models/chiller_rf_model.pkl
+results/run_*CHILLER*/models/chiller_rf_model.pkl
+
+# Output of the incomplete 2026-07-30 reproduction run (binary model, SD-AHU
+# data not loaded) — not the canonical thesis model
+models/rf_model.pkl
+models/scaler.pkl
+models/feature_cols.pkl
+results/thesis_reproduction.json
+thesis_reproduces.py

@@ -1,0 +1,20 @@
+{
+  "psi_values": {
+    "AHU: Supply Air Fan Speed Control Signal": 8.648180804748963,
+    "AHU: Outdoor Air Temperature": 8.101194908307296,
+    "AHU: Supply Air Temperature": 2.938314265554613,
+    "AHU: Return Air Damper Control Signal": 1.9913260959312091,
+    "AHU: Cooling Coil Valve Control Signal": 0.8775232383965998,
+    "AHU: Mixed Air Temperature": 0.854119508912628,
+    "AHU: Return Air Temperature": 0.7249815387489787,
+    "AHU: Outdoor Air Damper Control Signal": 0.5878990700581829,
+    "AHU: Heating Coil Valve Control Signal": 0.49224851244908174,
+    "AHU: Supply Air Fan Status": 0.2798882491586442,
+    "Occupancy Mode Indicator": 0.00017067199574883035
+  },
+  "f1_macro": 0.6294085821794617,
+  "classes_present": [
+    0,
+    1
+  ]
+}

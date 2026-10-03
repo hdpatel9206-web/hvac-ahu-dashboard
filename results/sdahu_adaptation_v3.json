@@ -1,0 +1,86 @@
+{
+  "experiment": "sdahu_adaptation_v3",
+  "shared_cols": [
+    "AHU: Mixed Air Temperature",
+    "AHU: Outdoor Air Temperature",
+    "AHU: Return Air Temperature",
+    "AHU: Supply Air Fan Speed Control Signal",
+    "AHU: Supply Air Temperature"
+  ],
+  "n_features": 38,
+  "f1_insample": 1.0,
+  "f1_baseline": 0.2232,
+  "f1_fault_a_baseline": 0.5816,
+  "f1_fault_b_baseline": 0.0443,
+  "best_f1": 0.95,
+  "best_proportion": 0.5,
+  "best_records": 840864,
+  "thesis_baseline": 0.331,
+  "thesis_adapted": 0.991,
+  "curve": [
+    {
+      "proportion": 0.0,
+      "records": 0,
+      "f1_macro": 0.2232,
+      "f1_fault_a": 0.5816,
+      "f1_fault_b": 0.0443,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.01,
+      "records": 16817,
+      "f1_macro": 0.8009,
+      "f1_fault_a": 0.8521,
+      "f1_fault_b": 0.7248,
+      "delta": 0.5777
+    },
+    {
+      "proportion": 0.02,
+      "records": 33634,
+      "f1_macro": 0.8346,
+      "f1_fault_a": 0.8721,
+      "f1_fault_b": 0.7662,
+      "delta": 0.6114
+    },
+    {
+      "proportion": 0.05,
+      "records": 84086,
+      "f1_macro": 0.8723,
+      "f1_fault_a": 0.896,
+      "f1_fault_b": 0.8016,
+      "delta": 0.6491
+    },
+    {
+      "proportion": 0.1,
+      "records": 168172,
+      "f1_macro": 0.8956,
+      "f1_fault_a": 0.9128,
+      "f1_fault_b": 0.8295,
+      "delta": 0.6723
+    },
+    {
+      "proportion": 0.2,
+      "records": 336345,
+      "f1_macro": 0.9184,
+      "f1_fault_a": 0.9303,
+      "f1_fault_b": 0.8605,
+      "delta": 0.6952
+    },
+    {
+      "proportion": 0.3,
+      "records": 504518,
+      "f1_macro": 0.9334,
+      "f1_fault_a": 0.942,
+      "f1_fault_b": 0.8839,
+      "delta": 0.7102
+    },
+    {
+      "proportion": 0.5,
+      "records": 840864,
+      "f1_macro": 0.95,
+      "f1_fault_a": 0.9557,
+      "f1_fault_b": 0.9109,
+      "delta": 0.7268
+    }
+  ]
+}

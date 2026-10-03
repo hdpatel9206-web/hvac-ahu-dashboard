@@ -1,0 +1,70 @@
+{
+  "dataset": "ASHRAE_LBNL",
+  "run_timestamp": "20260409_022716",
+  "n_train": 82560,
+  "n_test": 20640,
+  "n_cross_building": 53279,
+  "n_features": 70,
+  "macro_f1_insample": 0.9923,
+  "macro_f1_ci_lo": 0.9913,
+  "macro_f1_ci_hi": 0.9933,
+  "mcc": 0.9827,
+  "balanced_acc": 0.9911,
+  "f1_cross_building": 0.331,
+  "generalisation_drop_pp": 66.13,
+  "fpr_per_class": {
+    "Healthy": 0.0179,
+    "Fault-A (OA Sensor)": 0.0027,
+    "Fault-B (Valve Leak)": 0.0,
+    "Fault-C (Control)": 0.0
+  },
+  "psi_top_features": {
+    "AHU: Supply Air Temperature": 0.8401,
+    "AHU: Outdoor Air Temperature": 2.4517,
+    "AHU: Mixed Air Temperature": 0.5122,
+    "AHU: Return Air Temperature": 0.7136,
+    "AHU: Supply Air Fan Status": 0.01,
+    "AHU: Supply Air Fan Speed Control Signal": 2.6321,
+    "AHU: Outdoor Air Damper Control Signal": 0.4811,
+    "AHU: Return Air Damper Control Signal": 1.4386
+  },
+  "mcnemar_tests": {
+    "Rule-based (Dummy)": {
+      "chi2": 12872.512,
+      "pvalue": 0.0,
+      "significant": true
+    },
+    "SVM": {
+      "chi2": 5670.756,
+      "pvalue": 0.0,
+      "significant": true
+    },
+    "Gradient Boosting": {
+      "chi2": 1162.669,
+      "pvalue": 0.0,
+      "significant": true
+    }
+  },
+  "model_comparison": {
+    "Rule-based (Dummy)": {
+      "f1": 0.2515,
+      "mcc": -0.001,
+      "bal": 0.2515
+    },
+    "SVM": {
+      "f1": 0.7651,
+      "mcc": 0.6482,
+      "bal": 0.8437
+    },
+    "Gradient Boosting": {
+      "f1": 0.9464,
+      "mcc": 0.8841,
+      "bal": 0.9429
+    },
+    "Random Forest": {
+      "f1": 0.9923,
+      "mcc": 0.9827,
+      "bal": 0.9911
+    }
+  }
+}

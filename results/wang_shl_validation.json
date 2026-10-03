@@ -1,0 +1,33 @@
+{
+  "dataset": "Wang Office (South Korea)",
+  "source": "Wang et al. 2025, DOI: 10.6084/m9.figshare.27147678.v3",
+  "n_timesteps": 43200,
+  "n_mapped_sensors": 4,
+  "cbf_violations": 0,
+  "cbf_pass": true,
+  "rl_actions_taken": 720,
+  "final_sp_pa": 265.8,
+  "final_oa_fraction": 0.8778,
+  "final_t_changeover": 18.98,
+  "psi_initial_max": 50.659,
+  "psi_final_ema": 4.1059,
+  "psi_vs_benchmark_ratio": 19.3,
+  "gate_distribution": {
+    "GREEN": 0,
+    "AMBER": 900,
+    "RED": 42300
+  },
+  "gate_pct_green": 0.0,
+  "gate_pct_amber": 2.1,
+  "gate_pct_red": 97.9,
+  "green_gate_samples": 0,
+  "binary_f1_green_gate": null,
+  "runtime_seconds": 8.9,
+  "seed": 42,
+  "thesis_comparison": {
+    "simulation_cbf_violations": 0,
+    "simulation_minutes": 43200,
+    "benchmark_max_psi": 2.63,
+    "real_world_ratio_confirmed": 19.3
+  }
+}

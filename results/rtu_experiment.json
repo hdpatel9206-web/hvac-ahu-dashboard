@@ -1,0 +1,61 @@
+{
+  "experiment": "rtu_cross_equipment",
+  "train_equipment": "AHU (ASHRAE MZVAV + SZCAV)",
+  "test_equipment": "RTU (retail/commercial)",
+  "f1_insample": 0.1983,
+  "f1_cross_equip": 0.1276,
+  "thesis_ahu_cb_f1": 0.331,
+  "shared_features": 7,
+  "top5_psi": {
+    "Occupancy Mode Indicator_rm60": 0.078,
+    "Occupancy Mode Indicator_rm30": 0.075,
+    "Occupancy Mode Indicator_rm10": 0.073,
+    "Occupancy Mode Indicator": 0.072,
+    "Occupancy Mode Indicator_rs60": 0.001
+  },
+  "adaptation_curve": [
+    {
+      "proportion": 0.0,
+      "records": 0,
+      "f1_macro": 0.1276,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.01,
+      "records": 152,
+      "f1_macro": 0.1281,
+      "delta": 0.0005
+    },
+    {
+      "proportion": 0.02,
+      "records": 304,
+      "f1_macro": 0.1276,
+      "delta": -0.0001
+    },
+    {
+      "proportion": 0.05,
+      "records": 762,
+      "f1_macro": 0.1276,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.1,
+      "records": 1524,
+      "f1_macro": 0.2411,
+      "delta": 0.1134
+    },
+    {
+      "proportion": 0.2,
+      "records": 3048,
+      "f1_macro": 0.1876,
+      "delta": 0.0599
+    },
+    {
+      "proportion": 0.3,
+      "records": 4572,
+      "f1_macro": 0.1872,
+      "delta": 0.0596
+    }
+  ],
+  "rtu_mode": "labelled"
+}

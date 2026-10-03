@@ -1,0 +1,57 @@
+[
+  {
+    "rank": 1,
+    "feature": "AHU: Outdoor Air Temperature",
+    "mean_abs_shap": 0.08398887300581875
+  },
+  {
+    "rank": 2,
+    "feature": "AHU: Outdoor Air Damper Control Signal",
+    "mean_abs_shap": 0.05306048912287619
+  },
+  {
+    "rank": 3,
+    "feature": "AHU: Supply Air Temperature",
+    "mean_abs_shap": 0.05208326036261815
+  },
+  {
+    "rank": 4,
+    "feature": "AHU: Return Air Temperature",
+    "mean_abs_shap": 0.05199953894957808
+  },
+  {
+    "rank": 5,
+    "feature": "AHU: Mixed Air Temperature",
+    "mean_abs_shap": 0.04978232646109436
+  },
+  {
+    "rank": 6,
+    "feature": "AHU: Supply Air Fan Speed Control Signal",
+    "mean_abs_shap": 0.04509647964918601
+  },
+  {
+    "rank": 7,
+    "feature": "AHU: Return Air Damper Control Signal",
+    "mean_abs_shap": 0.024175988690102408
+  },
+  {
+    "rank": 8,
+    "feature": "AHU: Cooling Coil Valve Control Signal",
+    "mean_abs_shap": 0.014281646352160858
+  },
+  {
+    "rank": 9,
+    "feature": "AHU: Supply Air Fan Status",
+    "mean_abs_shap": 0.00994843135614686
+  },
+  {
+    "rank": 10,
+    "feature": "AHU: Heating Coil Valve Control Signal",
+    "mean_abs_shap": 0.0059283984759848
+  },
+  {
+    "rank": 11,
+    "feature": "Occupancy Mode Indicator",
+    "mean_abs_shap": 0.005094997501194367
+  }
+]

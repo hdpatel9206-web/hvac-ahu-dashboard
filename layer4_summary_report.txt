@@ -1,0 +1,37 @@
+====================================================================
+LAYER 4 VALIDATION REPORT
+Thesis: Harshil Patel, M.Sc. Smart Building Technologies
+bbw Hochschule Berlin
+Runtime: 13.4 s   Simulated: 30 days (43,200 minutes)
+====================================================================
+
+TRUE ZERO-SHOT SUCCESS CRITERION (ZSSC)
+----------------------------------------
+  [FAIL]  binary_F1  > 0.850
+  [FAIL]  4class_F1  > 0.350
+  [FAIL]  PSI_max    < 0.500 after 24 h RL
+  [PASS]  CBF_violations == 0
+
+QUANTITATIVE METRICS (final 24-hour window)
+----------------------------------------
+  Binary F1          : 0.3359
+  Four-class F1      : 0.3431
+  PSI 24-h average   : 0.3306
+  CBF violations     : 0
+  RL updates executed: 538 min
+
+THESIS ANCHOR COMPARISON
+----------------------------------------
+  In-sample F1       : 0.9923  [0.9913, 0.9933]   (target)
+  Cross-bldg F1      : 0.418   (57.3 pp gap)       (baseline)
+  Binary CB F1       : 0.628   (no adaptation)     (baseline)
+  10% adapt binary F1: 0.992                       (thesis result)
+  Zero-shot binary F1: 0.3359        (this simulation)
+
+GATE STATE DISTRIBUTION
+----------------------------------------
+  GREEN   :    546 samples  (12.6%)
+  AMBER   :    822 samples  (19.0%)
+  RED     :   2952 samples  (68.3%)
+
+====================================================================

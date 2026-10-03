@@ -1,0 +1,130 @@
+{
+  "experiment": "LOBO cross-validation",
+  "dataset": "ASHRAE LBNL AHU benchmark",
+  "n_buildings": 5,
+  "n_folds": 5,
+  "features": 70,
+  "random_state": 42,
+  "n_bootstrap": 1000,
+  "runtime_s": 584.1,
+  "run_date": "2026-06-30",
+  "primary_model_reference": {
+    "binary_f1": 0.415,
+    "macro_f1": 0.331,
+    "gap_pp": 66.13
+  },
+  "aggregate": {
+    "mean_binary_f1": 0.5727,
+    "std_binary_f1": 0.234,
+    "min_binary_f1": 0.2216,
+    "max_binary_f1": 0.8152,
+    "mean_macro_f1": 0.4301,
+    "std_macro_f1": 0.1234,
+    "mean_mcc": 0.0743,
+    "std_mcc": 0.1173,
+    "mean_gap_pp": 42.73,
+    "std_gap_pp": 23.4
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "test_building": "MZVAV-1",
+      "train_buildings": [
+        "MZVAV-2-1",
+        "SZCAV",
+        "MZVAV-2-2",
+        "SZVAV"
+      ],
+      "n_train": 96479,
+      "n_test": 272160,
+      "f1_binary": 0.3713,
+      "f1_macro": 0.3065,
+      "mcc": 0.0028,
+      "bal_acc": 0.5017,
+      "f1_insample_proxy": 1.0,
+      "gap_pp": 62.87,
+      "ci_lo": 0.3047,
+      "ci_hi": 0.3082
+    },
+    {
+      "fold": 2,
+      "test_building": "MZVAV-2-1",
+      "train_buildings": [
+        "MZVAV-1",
+        "SZCAV",
+        "MZVAV-2-2",
+        "SZVAV"
+      ],
+      "n_train": 347039,
+      "n_test": 21600,
+      "f1_binary": 0.2216,
+      "f1_macro": 0.2706,
+      "mcc": -0.0237,
+      "bal_acc": 0.486,
+      "f1_insample_proxy": 1.0,
+      "gap_pp": 77.84,
+      "ci_lo": 0.2648,
+      "ci_hi": 0.2764
+    },
+    {
+      "fold": 3,
+      "test_building": "SZCAV",
+      "train_buildings": [
+        "MZVAV-1",
+        "MZVAV-2-1",
+        "MZVAV-2-2",
+        "SZVAV"
+      ],
+      "n_train": 347039,
+      "n_test": 21600,
+      "f1_binary": 0.8152,
+      "f1_macro": 0.448,
+      "mcc": -0.0394,
+      "bal_acc": 0.465,
+      "f1_insample_proxy": 1.0,
+      "gap_pp": 18.48,
+      "ci_lo": 0.4429,
+      "ci_hi": 0.4529
+    },
+    {
+      "fold": 4,
+      "test_building": "MZVAV-2-2",
+      "train_buildings": [
+        "MZVAV-1",
+        "MZVAV-2-1",
+        "SZCAV",
+        "SZVAV"
+      ],
+      "n_train": 331199,
+      "n_test": 37440,
+      "f1_binary": 0.6881,
+      "f1_macro": 0.5582,
+      "mcc": 0.2384,
+      "bal_acc": 0.5964,
+      "f1_insample_proxy": 1.0,
+      "gap_pp": 31.19,
+      "ci_lo": 0.5527,
+      "ci_hi": 0.5632
+    },
+    {
+      "fold": 5,
+      "test_building": "SZVAV",
+      "train_buildings": [
+        "MZVAV-1",
+        "MZVAV-2-1",
+        "SZCAV",
+        "MZVAV-2-2"
+      ],
+      "n_train": 352800,
+      "n_test": 15839,
+      "f1_binary": 0.7671,
+      "f1_macro": 0.567,
+      "mcc": 0.1934,
+      "bal_acc": 0.5763,
+      "f1_insample_proxy": 1.0,
+      "gap_pp": 23.29,
+      "ci_lo": 0.5588,
+      "ci_hi": 0.576
+    }
+  ]
+}

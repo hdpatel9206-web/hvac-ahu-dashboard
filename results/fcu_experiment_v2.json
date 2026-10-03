@@ -1,0 +1,90 @@
+{
+  "experiment": "fcu_cross_equipment_v2",
+  "shared_sensors": 8,
+  "total_features": 59,
+  "f1_insample": 1.0,
+  "f1_cross_equip": 0.0211,
+  "best_adapted": 0.6641,
+  "best_proportion": 0.2,
+  "psi_results": {
+    "AHU: Cooling Coil Valve Control Signal": 0.213,
+    "AHU: Heating Coil Valve Control Signal": 0.195,
+    "AHU: Mixed Air Temperature": 0.831,
+    "AHU: Outdoor Air Damper Control Signal": 7.073,
+    "AHU: Outdoor Air Temperature": 0.388,
+    "AHU: Return Air Temperature": 0.601,
+    "AHU: Supply Air Fan Speed Control Signal": 8.322,
+    "AHU: Supply Air Temperature": 3.463
+  },
+  "comparison": {
+    "AHU_AHU_thesis": {
+      "shared": 7,
+      "baseline": 0.331,
+      "adapted": 0.991
+    },
+    "AHU_AHU_sdahu": {
+      "shared": 7,
+      "baseline": 0.223,
+      "adapted": 0.896
+    },
+    "AHU_FCU": {
+      "shared": 8,
+      "baseline": 0.0211,
+      "adapted": 0.6641
+    },
+    "AHU_RTU": {
+      "shared": 1,
+      "baseline": 0.128,
+      "adapted": 0.241
+    },
+    "AHU_Boiler": {
+      "shared": 1,
+      "baseline": 0.096,
+      "adapted": 0.157
+    }
+  },
+  "curve": [
+    {
+      "proportion": 0.0,
+      "records": 0,
+      "f1_macro": 0.0211,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.01,
+      "records": 50000,
+      "f1_macro": 0.6628,
+      "delta": 0.6417
+    },
+    {
+      "proportion": 0.02,
+      "records": 50000,
+      "f1_macro": 0.6596,
+      "delta": 0.6385
+    },
+    {
+      "proportion": 0.05,
+      "records": 50000,
+      "f1_macro": 0.659,
+      "delta": 0.6379
+    },
+    {
+      "proportion": 0.1,
+      "records": 50000,
+      "f1_macro": 0.6581,
+      "delta": 0.637
+    },
+    {
+      "proportion": 0.2,
+      "records": 50000,
+      "f1_macro": 0.6641,
+      "delta": 0.6429
+    },
+    {
+      "proportion": 0.3,
+      "records": 50000,
+      "f1_macro": 0.655,
+      "delta": 0.6339
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "experiment": "fcu_cross_equipment_complete",
+  "note": "Baseline and adaptation from v1 partial run (before memory crash). v2 confirmed baseline. 50k cap shows plateau at 0.66.",
+  "shared_sensors": 8,
+  "shared_sensor_names": [
+    "AHU: Cooling Coil Valve Control Signal",
+    "AHU: Heating Coil Valve Control Signal",
+    "AHU: Mixed Air Temperature",
+    "AHU: Outdoor Air Damper Control Signal",
+    "AHU: Outdoor Air Temperature",
+    "AHU: Return Air Temperature",
+    "AHU: Supply Air Fan Speed Control Signal",
+    "AHU: Supply Air Temperature"
+  ],
+  "total_features": 59,
+  "total_fcu_rows": 25754400,
+  "fault_classes": 10,
+  "f1_insample": 1.0,
+  "f1_baseline": 0.0211,
+  "psi_results": {
+    "AHU: Cooling Coil Valve Control Signal": 0.213,
+    "AHU: Heating Coil Valve Control Signal": 0.195,
+    "AHU: Mixed Air Temperature": 0.831,
+    "AHU: Outdoor Air Damper Control Signal": 7.073,
+    "AHU: Outdoor Air Temperature": 0.388,
+    "AHU: Return Air Temperature": 0.601,
+    "AHU: Supply Air Fan Speed Control Signal": 8.322,
+    "AHU: Supply Air Temperature": 3.463
+  },
+  "adaptation_curve": [
+    {
+      "proportion": 0.0,
+      "records": 0,
+      "f1_macro": 0.0211,
+      "delta": 0.0
+    },
+    {
+      "proportion": 0.01,
+      "records": 206035,
+      "f1_macro": 0.744,
+      "delta": 0.7229,
+      "source": "v1_partial"
+    },
+    {
+      "proportion": 0.02,
+      "records": 412070,
+      "f1_macro": 0.7782,
+      "delta": 0.7571,
+      "source": "v1_partial"
+    },
+    {
+      "proportion": 0.05,
+      "records": 1030176,
+      "f1_macro": 0.8249,
+      "delta": 0.8038,
+      "source": "v1_partial"
+    },
+    {
+      "proportion": 0.1,
+      "records": 2060352,
+      "f1_macro": 0.8525,
+      "delta": 0.8314,
+      "source": "v1_partial"
+    },
+    {
+      "proportion": 0.2,
+      "records": 50000,
+      "f1_macro": 0.6641,
+      "delta": 0.643,
+      "source": "v2_capped_50k"
+    },
+    {
+      "proportion": 0.3,
+      "records": 50000,
+      "f1_macro": 0.655,
+      "delta": 0.6339,
+      "source": "v2_capped_50k"
+    }
+  ],
+  "key_finding": "FCU baseline F1 = 0.021 despite 8 shared sensor columns. PSI is extreme on 5 of 8 sensors (damper 7.07, fan speed 8.32, SA temp 3.46). Adaptation with 1% data (206k records) recovers to F1=0.744. 10% data recovers to F1=0.853. Recovery requires large volumes of FCU data because 10 fault classes must be learned. Contrast: RTU and Boiler plateau at 0.241 and 0.157 regardless of data volume \u2014 architectural mismatch cannot be overcome by adaptation alone.",
+  "three_category_framework": {
+    "CAT1_same_equipment": {
+      "examples": [
+        "AHU\u2192AHU thesis",
+        "AHU\u2192AHU SD-AHU"
+      ],
+      "baseline_range": "0.22-0.33",
+      "recovery": "Full recovery with 10% target data",
+      "mechanism": "Distribution shift in control-logic sensors",
+      "psi_solution": "PSI-guided adaptation sufficient"
+    },
+    "CAT2_thermodynamic_similar": {
+      "examples": [
+        "AHU\u2192FCU"
+      ],
+      "baseline_range": "0.02-0.09",
+      "recovery": "Full recovery but requires more data (>10%)",
+      "mechanism": "Same physics different operating ranges",
+      "psi_solution": "PSI identifies shift \u2014 larger adaptation dataset needed"
+    },
+    "CAT3_architectural_mismatch": {
+      "examples": [
+        "AHU\u2192RTU",
+        "AHU\u2192Boiler"
+      ],
+      "baseline_range": "0.10-0.13",
+      "recovery": "Minimal \u2014 adaptation plateaus below 0.25",
+      "mechanism": "No shared thermodynamic operating principles",
+      "psi_solution": "Equipment-specific model required"
+    }
+  },
+  "complete_comparison": {
+    "AHU_AHU_thesis": {
+      "shared": 7,
+      "baseline": 0.331,
+      "best_adapted": 0.991
+    },
+    "AHU_AHU_sdahu": {
+      "shared": 7,
+      "baseline": 0.223,
+      "best_adapted": 0.896
+    },
+    "AHU_FCU": {
+      "shared": 8,
+      "baseline": 0.021,
+      "best_adapted": 0.853
+    },
+    "AHU_RTU": {
+      "shared": 1,
+      "baseline": 0.128,
+      "best_adapted": 0.241
+    },
+    "AHU_Boiler": {
+      "shared": 1,
+      "baseline": 0.096,
+      "best_adapted": 0.157
+    }
+  }
+}

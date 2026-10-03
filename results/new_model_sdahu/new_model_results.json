@@ -1,0 +1,32 @@
+{
+  "experiment": "new_model_sdahu_genuine_fault_types",
+  "training_data": "LBNL SD-AHU with genuine fault type labels",
+  "label_scheme": "0=Healthy 1=SensorBias 2=ValveFault 3=DamperFault",
+  "f1_insample": 0.9889,
+  "f1_crossbuilding": 0.0088,
+  "f1_binary_cb": 0.3522,
+  "gap_pp": 98.01,
+  "old_f1_insample": 0.9923,
+  "old_f1_crossbldg": 0.331,
+  "psi_values": {
+    "AHU: Supply Air Temperature": 1.9745,
+    "AHU: Outdoor Air Temperature": 17.3208,
+    "AHU: Mixed Air Temperature": 2.7119,
+    "AHU: Return Air Temperature": 5.418,
+    "AHU: Supply Air Fan Status": 0.2234,
+    "AHU: Supply Air Fan Speed Control Signal": 1.9659,
+    "AHU: Outdoor Air Damper Control Signal": 2.8591,
+    "AHU: Return Air Damper Control Signal": 2.3588,
+    "AHU: Cooling Coil Valve Control Signal": 0.6538,
+    "AHU: Heating Coil Valve Control Signal": 3.3092,
+    "Occupancy Mode Indicator": 0.0045
+  },
+  "label_distribution": {
+    "0": 50000,
+    "1": 400000,
+    "2": 400000,
+    "3": 200000
+  },
+  "verdict": "RED - OLD MODEL IS BETTER",
+  "action": "Keep original model. Restore from backup if needed."
+}

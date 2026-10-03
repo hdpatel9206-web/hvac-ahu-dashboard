@@ -1,0 +1,32 @@
+{
+  "equipment": "ahu",
+  "files_used": [
+    "MZVAV-1.csv",
+    "MZVAV-2-1.csv",
+    "SZCAV.csv",
+    "MZVAV-2-2.csv",
+    "SZVAV.csv"
+  ],
+  "feature_cols": [
+    "AHU: Cooling Coil Valve Control Signal",
+    "AHU: Heating Coil Valve Control Signal",
+    "AHU: Mixed Air Temperature",
+    "AHU: Outdoor Air Damper Control Signal",
+    "AHU: Outdoor Air Temperature",
+    "AHU: Return Air Damper Control Signal",
+    "AHU: Return Air Temperature",
+    "AHU: Supply Air Fan Speed Control Signal",
+    "AHU: Supply Air Fan Status",
+    "AHU: Supply Air Temperature",
+    "Occupancy Mode Indicator"
+  ],
+  "training_rows": 146388,
+  "class_distribution": {
+    "0": 54704,
+    "1": 91684
+  },
+  "f1_insample": 0.9909966722693995,
+  "f1_cv_mean": 0.6905771669209159,
+  "f1_cv_std": 0.1461078805246446,
+  "classification_report": "              precision    recall  f1-score   support\n\n           0       0.98      1.00      0.99     54704\n           1       1.00      0.99      0.99     91684\n\n    accuracy                           0.99    146388\n   macro avg       0.99      0.99      0.99    146388\nweighted avg       0.99      0.99      0.99    146388\n"
+}

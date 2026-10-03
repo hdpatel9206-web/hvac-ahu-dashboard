@@ -1,0 +1,88 @@
+{
+  "standard": {
+    "label": "Standard scaling (original)",
+    "normalised": false,
+    "baseline_f1": 0.0394,
+    "psi_after": {
+      "AHU: Cooling Coil Valve Control Signal": 0.135,
+      "AHU: Heating Coil Valve Control Signal": 0.177,
+      "AHU: Mixed Air Temperature": 1.025,
+      "AHU: Outdoor Air Damper Control Signal": 10.702,
+      "AHU: Outdoor Air Temperature": 0.388,
+      "AHU: Return Air Temperature": 0.674,
+      "AHU: Supply Air Fan Speed Control Signal": 8.542,
+      "AHU: Supply Air Temperature": 2.068
+    },
+    "curve": [
+      {
+        "proportion": 0.0,
+        "records": 0,
+        "f1": 0.0394
+      },
+      {
+        "proportion": 0.01,
+        "records": 50000,
+        "f1": 0.7551
+      },
+      {
+        "proportion": 0.02,
+        "records": 50000,
+        "f1": 0.7626
+      },
+      {
+        "proportion": 0.05,
+        "records": 50000,
+        "f1": 0.7554
+      },
+      {
+        "proportion": 0.1,
+        "records": 50000,
+        "f1": 0.7597
+      }
+    ]
+  },
+  "normalised": {
+    "label": "Physics-based normalisation",
+    "normalised": true,
+    "baseline_f1": 0.0302,
+    "psi_after": {
+      "AHU: Cooling Coil Valve Control Signal": 0.135,
+      "AHU: Heating Coil Valve Control Signal": 0.177,
+      "AHU: Mixed Air Temperature": 0.689,
+      "AHU: Outdoor Air Damper Control Signal": 10.702,
+      "AHU: Outdoor Air Temperature": 0.152,
+      "AHU: Return Air Temperature": 0.024,
+      "AHU: Supply Air Fan Speed Control Signal": 21.879,
+      "AHU: Supply Air Temperature": 0.038
+    },
+    "curve": [
+      {
+        "proportion": 0.0,
+        "records": 0,
+        "f1": 0.0302
+      },
+      {
+        "proportion": 0.01,
+        "records": 50000,
+        "f1": 0.9137
+      },
+      {
+        "proportion": 0.02,
+        "records": 50000,
+        "f1": 0.914
+      },
+      {
+        "proportion": 0.05,
+        "records": 50000,
+        "f1": 0.9167
+      },
+      {
+        "proportion": 0.1,
+        "records": 50000,
+        "f1": 0.9171
+      }
+    ]
+  },
+  "improvement": -0.0092,
+  "finding": "MINIMAL \u2014 operating range difference is not the primary barrier"
+}

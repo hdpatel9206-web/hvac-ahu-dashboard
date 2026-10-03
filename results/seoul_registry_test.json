@@ -1,0 +1,25 @@
+{
+  "experiment": "seoul_real_bms_external_validation",
+  "dataset": "Real BMS, South Korea, Hanyang University 2024",
+  "doi": "10.1016/j.dib.2024.110956",
+  "rows": 5471,
+  "shared_cols": [
+    "AHU: Supply Air Temperature",
+    "AHU: Outdoor Air Temperature",
+    "AHU: Supply Air Fan Status",
+    "AHU: Cooling Coil Valve Control Signal"
+  ],
+  "f1_cross_equipment": 0.1829,
+  "psi_values": {
+    "AHU: Supply Air Temperature": 40.2469,
+    "AHU: Cooling Coil Valve Control Signal": 24.0633,
+    "AHU: Outdoor Air Temperature": 20.4375,
+    "AHU: Supply Air Fan Status": 2.2919
+  },
+  "thesis_comparison": {
+    "ahu_ahu_cross_building": 0.331,
+    "ahu_fcu_cross_equipment": 0.086,
+    "ahu_rtu_cross_equipment": 0.128,
+    "ahu_boiler_cross_equipment": 0.096
+  }
+}

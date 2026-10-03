@@ -1,0 +1,30 @@
+{
+  "experiment": "cork_industrial_psi",
+  "dataset": "Real industrial BMS, Cork Ireland, 2015-2022",
+  "doi": "10.17632/8x62ntvrg7.2",
+  "rows": 194048,
+  "shared_cols": [
+    "AHU: Return Air Temperature",
+    "AHU: Outdoor Air Temperature",
+    "AHU: Mixed Air Temperature",
+    "AHU: Outdoor Air Damper Control Signal",
+    "AHU: Return Air Damper Control Signal",
+    "AHU: Heating Coil Valve Control Signal",
+    "AHU: Cooling Coil Valve Control Signal",
+    "AHU: Supply Air Temperature"
+  ],
+  "psi_values": {
+    "AHU: Return Air Temperature": 49.9411,
+    "AHU: Outdoor Air Temperature": 7.528,
+    "AHU: Mixed Air Temperature": 34.417,
+    "AHU: Outdoor Air Damper Control Signal": 22.0369,
+    "AHU: Return Air Damper Control Signal": 13.2329,
+    "AHU: Heating Coil Valve Control Signal": 1.6051,
+    "AHU: Cooling Coil Valve Control Signal": 3.1012,
+    "AHU: Supply Air Temperature": 0.0022
+  },
+  "max_psi": 49.9411,
+  "gate": "RED",
+  "has_labels": false,
+  "note": "PSI only - no fault labels in Cork dataset"
+}

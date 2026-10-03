@@ -1,0 +1,32 @@
+[
+  {
+    "config": "Config 1 \u2014 Raw sensors only (11)",
+    "n": 10,
+    "f1_in": 0.9837,
+    "f1_cb": 0.2581
+  },
+  {
+    "config": "Config 2 \u2014 Raw + Window 10",
+    "n": 30,
+    "f1_in": 0.9798,
+    "f1_cb": 0.296
+  },
+  {
+    "config": "Config 3 \u2014 Raw + Windows 10+30",
+    "n": 50,
+    "f1_in": 0.9837,
+    "f1_cb": 0.2641
+  },
+  {
+    "config": "Config 4 \u2014 All windows, no derived",
+    "n": 70,
+    "f1_in": 0.9871,
+    "f1_cb": 0.2732
+  },
+  {
+    "config": "Config 5 \u2014 Full feature set (70)",
+    "n": 74,
+    "f1_in": 0.9901,
+    "f1_cb": 0.2722
+  }
+]

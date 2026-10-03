@@ -1,0 +1,44 @@
+{
+  "equipment": "boiler",
+  "files_used": [
+    "BoilerPlant.csv",
+    "BoilerPlant_boiler_PI.csv",
+    "BoilerPlant_boiler_bias_-2.csv",
+    "BoilerPlant_boiler_bias_-4.csv",
+    "BoilerPlant_boiler_bias_2.csv",
+    "BoilerPlant_boiler_bias_4.csv",
+    "BoilerPlant_boiler_foul_065.csv",
+    "BoilerPlant_boiler_foul_080.csv",
+    "BoilerPlant_boiler_foul_095.csv",
+    "BoilerPlant_hot_water_pressure_bias_-10.csv",
+    "BoilerPlant_hot_water_pressure_bias_-20.csv",
+    "BoilerPlant_hot_water_pressure_bias_10.csv",
+    "BoilerPlant_hot_water_pressure_bias_20.csv",
+    "BoilerPlant_hot_water_temp_bias_-2.csv",
+    "BoilerPlant_hot_water_temp_bias_-4.csv",
+    "BoilerPlant_hot_water_temp_bias_2.csv",
+    "BoilerPlant_hot_water_temp_bias_4.csv"
+  ],
+  "feature_cols": [
+    "Outdoor Air Temperature",
+    "Hot Water Loop Supply Temperature",
+    "Hot Water Loop Return Temperature",
+    "Hot Water Loop Differential Pressure",
+    "Boiler 1 Supply Water Temperature",
+    "Boiler 1 Return Water Temperature",
+    "Pump 1 Speed",
+    "Pump 1 Power",
+    "Pump 2 Power"
+  ],
+  "training_rows": 850000,
+  "class_distribution": {
+    "0": 50000,
+    "1": 600000,
+    "2": 150000,
+    "3": 50000
+  },
+  "f1_insample": 0.9997183949688186,
+  "f1_cv_mean": 0.6655339377162844,
+  "f1_cv_std": 0.0963266720434518,
+  "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      1.00      1.00     50000\n           1       1.00      1.00      1.00    600000\n           2       1.00      1.00      1.00    150000\n           3       1.00      1.00      1.00     50000\n\n    accuracy                           1.00    850000\n   macro avg       1.00      1.00      1.00    850000\nweighted avg       1.00      1.00      1.00    850000\n"
+}
