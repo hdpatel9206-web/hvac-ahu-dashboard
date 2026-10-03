@@ -449,8 +449,13 @@ def fig_confusion_matrix(df):
     return fig
 
 
+# Neither chart below is simulation output: self_healing_loop.py saves no PSI
+# trajectory, so the curve is a formula plus seeded random noise.
+PSI_SCHEMATIC_TITLE = "Illustrative PSI trajectory (schematic, not simulation output)"
+
+
 def fig_psi_simulation():
-    """30-day PSI simulation timeline for Page 6."""
+    """Schematic 30-day PSI trajectory (formula + noise, not simulation output)."""
     np.random.seed(42)
     days    = np.linspace(0, 30, 43200)
     fan_psi = np.where(
@@ -478,8 +483,7 @@ def fig_psi_simulation():
     ax.axvspan(24, 26, alpha=0.20, color="#27ae60", label="Days 24-26: GREEN gate")
     ax.set_xlabel("Simulation Day", fontsize=9.5)
     ax.set_ylabel("PSI (EMA smoothed)", fontsize=9.5)
-    ax.set_title("30-Day Self-Healing Loop — Fan Speed PSI Trajectory",
-                 fontsize=11.5, fontweight="bold")
+    ax.set_title(PSI_SCHEMATIC_TITLE, fontsize=11.5, fontweight="bold")
     ax.legend(fontsize=8, ncol=3)
     ax.set_xlim(0, 30)
     ax.set_ylim(bottom=-0.2)
@@ -658,7 +662,7 @@ def fig_psi_sim_compact():
     ax.axvspan(24, 26, alpha=0.22, color="#27ae60", label="Days 24-26 GREEN")
     ax.set_xlabel("Simulation Day", fontsize=8.5)
     ax.set_ylabel("PSI (EMA)", fontsize=8.5)
-    ax.set_title("30-Day Self-Healing — Fan Speed PSI", fontsize=9.5, fontweight="bold")
+    ax.set_title(PSI_SCHEMATIC_TITLE, fontsize=9.5, fontweight="bold")
     ax.legend(fontsize=7, ncol=2)
     ax.set_xlim(0, 30); ax.set_ylim(bottom=-0.2)
     fig.tight_layout(pad=0.8)
@@ -1042,9 +1046,10 @@ def page_self_healing_loop():
         gc3.metric("4-class F1",   f"{m['green_4class']:.3f}",
                    f"+{m['green_4class'] - m['f1_crossbldg']:.3f} vs baseline")
 
-        st.markdown("**30-Day Simulation — PSI Trajectory**")
+        st.markdown(f"**{PSI_SCHEMATIC_TITLE}**")
         _show(fig_psi_sim_compact())
         st.caption(
+            f"{PSI_SCHEMATIC_TITLE}. "
             "Phase 1 (0–5d): clean. Phase 2 (5–15d): +17.2× shift. "
             "Phase 3 (15–30d): RL healing. Days 24–26: GREEN gate (highlighted)."
         )

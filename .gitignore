@@ -48,3 +48,34 @@ models/scaler.pkl
 models/feature_cols.pkl
 results/thesis_reproduction.json
 thesis_reproduces.py
+
+# ── Repository restructure: only app.py lives at the root ─────────────────
+# Kept scripts were copied into pipeline/ and experiments/; the root originals,
+# working/debug/fix scripts and superseded versions stay on disk, untracked.
+/*.py
+!/app.py
+/*.json
+/*.csv
+/*.txt
+!/requirements.txt
+/*.png
+/predict_pipeline .py
+hvac_dashboard/
+
+# Results not produced by a kept script
+results/baseline_results.json
+results/crossbuilding_psi_table.json
+results/psi_fixes.json
+results/routing_validation_output.txt
+results/fcu_experiment.json
+results/new_model_combined/
+results/new_model_final/
+results/new_model_optimised/
+results/new_model_sdahu/
+results/run_20260410_075809_CHILLER_RP1043/
+results/run_20260415_142209_ASHRAE_LBNL_IMPROVED/
+
+# Chiller model: produced by run_chiller_experiment.py, which is not kept
+models/chiller_rf_model.pkl
+models/chiller_scaler.pkl
+models/chiller_feature_cols.pkl

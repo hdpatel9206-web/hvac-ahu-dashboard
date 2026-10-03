@@ -37,6 +37,24 @@ Most fault-detection models for building HVAC are evaluated on the same building
 - **External validation.** Five BMS datasets from South Korea and Ireland, plus RTU validation (USA).
 - **Interactive Streamlit dashboard** for exploring predictions, SHAP explanations and drift status.
 
+## Repository structure
+
+```
+app.py              Streamlit dashboard (entry point)
+requirements.txt
+configs/            Dataset configs for pipeline/run_experiment.py
+data/               Dashboard sample data only — raw data not included (see data/README.md)
+docs/
+models/             Small model artefacts: chiller model, model-registry scalers and reports
+pipeline/           Core training and evaluation: canonical run, adaptation, learning curve,
+                    LOBO, SHAP ranking, PSI gate, model registry, self-healing loop
+experiments/        External validation and equipment experiments
+                    (Wang, Seoul, Cork, RTU, FCU, boiler, SD-AHU, ablation, confidence)
+results/            Result files behind the dashboard and the numbers in this README
+```
+
+Run scripts from the repository root, e.g. `python pipeline/run_experiment.py --config configs/config_ashrae.py`.
+
 ## Quick start
 
 ```bash
@@ -48,6 +66,13 @@ streamlit run app.py
 ```
 
 Thesis experiments ran on Python 3.12; dashboard tested on Python 3.14. Results are reproducible with `random_state=42`; canonical run: `run_20260409_022716_ASHRAE_LBNL`.
+
+## Reproducibility
+
+Canonical results come from run_20260409_022716_ASHRAE_LBNL (Random Forest, 200 trees, random_state=42); its outputs are in results/. pipeline/run_experiment.py was modified after that run and defaults to n_estimators=10 — set it to 200 to approximate the canonical configuration. Exact bit-for-bit reproduction is not guaranteed.
+
+- results/real_world_validation_complete.json is a hand-compiled summary of the Seoul and Cork validation results.
+- pipeline/finetune_fixed.py requires the canonical model from run_20260409_022716 (119 MB, not included).
 
 ## Data
 
