@@ -1,6 +1,6 @@
 # HVAC AHU Fault Detection — Explainable ML with Cross-Building Validation
 
-**MSc Thesis · Smart Building Technologies · bbw Hochschule Berlin (2026)**
+**MSc Thesis · Sustainability and Smart Building Technology · bbw Hochschule Berlin (2026)**
 *Multi-Fault Detection and Diagnosis for Smart Building AHUs: An Explainable Machine Learning Approach with Cross-Building Validation*
 
 Most fault-detection models for building HVAC are evaluated on the same building they were trained on. This project measures what happens when they are moved to a different building, explains why they fail, and shows how little target-building data is needed to recover.

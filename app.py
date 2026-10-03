@@ -5,7 +5,7 @@ Thesis: Multi-Fault Detection and Diagnosis for Smart Building AHUs:
         An Explainable Machine Learning Approach with Cross-Building Validation
 
 Student  : Harshil Patel
-Programme: M.Sc. Smart Building Technologies (M_SSBT_W24)
+Programme: M.Sc. Sustainability and Smart Building Technology (M_SSBT_W24)
 bbw Hochschule Berlin — University of Applied Sciences
 Supervisors: Prof. Farshi Hossein · Prof. Dr. Juan Ocampo
 
@@ -1111,7 +1111,7 @@ def page_self_healing_loop():
 
     st.caption(
         "Self-Healing Loop · layer4_validation_harness.py · "
-        "Harshil Patel · M.Sc. Smart Building Technologies · bbw Hochschule Berlin"
+        "Harshil Patel · M.Sc. Sustainability and Smart Building Technology · bbw Hochschule Berlin"
     )
 
 
@@ -1128,7 +1128,7 @@ with st.sidebar:
     st.caption("AHU Multi-Fault Detection")
     st.markdown(
         "<div style='font-size:10px;color:#888;line-height:1.6;'>"
-        "M.Sc. Smart Building Technologies<br>bbw Hochschule Berlin<br>Harshil Patel"
+        "M.Sc. Sustainability and Smart Building Technology<br>bbw Hochschule Berlin<br>Harshil Patel"
         "</div>", unsafe_allow_html=True)
     st.markdown(
         "<div style='font-size:9px;color:#3498db;font-style:italic;'>"
