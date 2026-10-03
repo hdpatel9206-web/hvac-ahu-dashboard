@@ -97,4 +97,4 @@ Supervisors: Prof. Farshi Hossein, Prof. Dr. Juan Ocampo
 
 ## Contact
 
-**Harshil Patel** · Berlin, Germany
+**Harshil Patel** · [LinkedIn](https://www.linkedin.com/in/harshil-patel-berlin) · Berlin, Germany
